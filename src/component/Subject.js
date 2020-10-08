@@ -6,7 +6,10 @@ class Subject extends React.Component{
       console.log('Subject render')
       return(
         <header>
-          <h1><a href="/">{this.props.title}</a></h1>
+          <h1><a href="/a" onClick={function(e){
+            e.preventDefault();
+            this.props.onClick();
+          }.bind(this)}>{this.props.title}</a></h1>
           {this.props.sub}
         </header>
       )

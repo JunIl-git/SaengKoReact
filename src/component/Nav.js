@@ -9,7 +9,16 @@ class Nav extends React.Component{
         let i = 0;
 
         while(i < data.length){
-        lists.push(<li key={data[i].id}><a href={'/content/'+data[i].id}>{data[i].title}</a></li>);
+        lists.push(<li  key={data[i].id}>
+                        <a 
+                            id = {data[i].id}
+                            onClick={function(e){
+                                e.preventDefault();
+                                this.props.onClick(e.target.id);
+                            }.bind(this)}
+                            href={'/content/'+data[i].id}>{data[i].title}
+                        </a>
+                    </li>);
             i = i + 1;
         }
         return(
