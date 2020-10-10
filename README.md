@@ -1,3 +1,6 @@
 # 생활코딩 React 
 
-1. 함수 내 this를 사용하고 싶으면 this를 바인딩 하거나 arrow function을 사용한다.
+Learn
+1. To use "this" in "function", bind "this" or use "this".
+
+2. 하위 component의 값을 바꾸고 싶으면 props를 사용하고 상위 component의 값을 바꾸기 위해서는 event를 활용한다. 

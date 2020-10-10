@@ -57,6 +57,13 @@ class App extends React.Component{
       <div className="App">
         <Subject  mode={this.state.mode} onClick={onClickButton1} title={this.state.subject.title} sub={this.state.subject.sub}></Subject>
         <Nav data ={this.state.contents} onClick={onClickButton2} ></Nav>
+        <div>
+          <ul>
+            <li><a href="/create">create</a></li>
+            <li><a href="/update">update</a></li>
+            <li><input type="button" value="delete"/></li>
+          </ul>
+        </div>
         <Article title={_title} sub={_desc}></Article>
       </div>
     )
