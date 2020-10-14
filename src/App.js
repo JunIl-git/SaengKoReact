@@ -1,13 +1,15 @@
 import React from 'react';
 import Subject from './component/Subject';
 import Nav from './component/Nav';
-import Article from './component/Article';
+import Control from './component/Control';
+import ReadContent from './component/ReadContent';
+import CreateContent from './component/CreateContent';
 
 class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      mode : 'read',
+      mode : 'create',
       selected_content_id:2,
       subject : {title : 'WEB', sub : 'Would Wide Web!'},
       welcome : {title : 'welcome', desc : 'Hello, React!!'},
@@ -22,22 +24,27 @@ class App extends React.Component{
 
   render(){
     console.log('App render')
-    let _title,_desc = null;
+    let _title,_desc,_article = null;
     
       if(this.state.mode === 'welcome'){
         _title = this.state.subject.title;
         _desc = this.state.subject.sub;
+        _article = <ReadContent title={_title} sub={_desc}></ReadContent>
       } else if(this.state.mode === 'read'){
         const data = this.state.contents;
-
         for(let i=0; i<data.length; i++){
           if(this.state.selected_content_id === data[i].id){
             _title = data[i].title;
             _desc = data[i].desc;
+            _article = <ReadContent title={_title} sub={_desc}></ReadContent>
           }
         }
-        
-
+      } else if(this.state.mode === 'create'){
+        _article = <CreateContent onSubmit ={(title,desc)=>{
+          const addContent = {id: this.state.contents.length+1, title:title, desc:desc}
+          let _contents =this.state.contents.concat(addContent)
+          this.setState({ contents: _contents});
+        }}></CreateContent>
       }
     
 
@@ -57,14 +64,12 @@ class App extends React.Component{
       <div className="App">
         <Subject  mode={this.state.mode} onClick={onClickButton1} title={this.state.subject.title} sub={this.state.subject.sub}></Subject>
         <Nav data ={this.state.contents} onClick={onClickButton2} ></Nav>
-        <div>
-          <ul>
-            <li><a href="/create">create</a></li>
-            <li><a href="/update">update</a></li>
-            <li><input type="button" value="delete"/></li>
-          </ul>
-        </div>
-        <Article title={_title} sub={_desc}></Article>
+        <Control onChangeMode = {function(mode){
+          this.setState({
+            mode : mode
+          })
+        }.bind(this)}></Control>
+        {_article}
       </div>
     )
   }

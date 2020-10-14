@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Article extends React.Component{
+class ReadContent extends React.Component{
     render(){
         console.log('article render')
         return(
@@ -12,4 +12,4 @@ class Article extends React.Component{
     }
 }
 
-export default Article;
+export default ReadContent;
