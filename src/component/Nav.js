@@ -2,7 +2,6 @@ import React from 'react';
 
 class Nav extends React.Component{
     shouldComponentUpdate(newProps, newState){
-        console.log(newProps.data, this.props.data);
 
         if(newProps.data === this.props.data){
             return false;
