@@ -10,7 +10,7 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      mode : 'create',
+      mode : 'welcome',
       selected_content_id:2,
       subject : {title : 'WEB', sub : 'Would Wide Web!'},
       welcome : {title : 'welcome', desc : 'Hello, React!!'},
@@ -48,7 +48,11 @@ class App extends React.Component{
         _article = <CreateContent onSubmit ={(title,desc)=>{
           const addContent = {id: this.state.contents.length+1, title:title, desc:desc}
           let _contents =this.state.contents.concat(addContent)
-          this.setState({ contents: _contents});
+          this.setState({ 
+            contents: _contents,
+            mode : 'read',
+            selected_content_id : this.state.contents.length+1
+          });
         }}></CreateContent>
       }else if(this.state.mode === 'update'){
         let _content = this.getReadContent();
@@ -61,7 +65,10 @@ class App extends React.Component{
             }
           }
           console.log(_contents);
-          this.setState({ contents: _contents});
+          this.setState({ 
+            contents: _contents,
+            mode : 'read'
+          });
         }}></UpdateContent>
       }
 
@@ -89,10 +96,26 @@ class App extends React.Component{
       <div className="App">
         <Subject  mode={this.state.mode} onClick={onClickButton1} title={this.state.subject.title} sub={this.state.subject.sub}></Subject>
         <Nav data ={this.state.contents} onClick={onClickButton2} ></Nav>
-        <Control onChangeMode = {function(mode){
-          this.setState({
-            mode : mode
-          })
+        <Control onChangeMode = {function(_mode){
+          if(_mode === 'delete'){
+            if(window.confirm('삭제하시겠습니까?')){
+              const _contents = Array.from(this.state.contents);
+              for(let i=0; i<_contents.length; i++){
+                if(_contents[i].id === this.state.selected_content_id){
+                  _contents.splice(i,1);
+                  break;
+                }
+              }
+              this.setState({
+                mode : 'welcome',
+                contents : _contents
+              })
+            }
+          } else{
+            this.setState({
+              mode : _mode
+            })
+          }
         }.bind(this)}></Control>
         {this.getContent()}
       </div>

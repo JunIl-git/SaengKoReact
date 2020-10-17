@@ -13,7 +13,6 @@ class CreateContent extends React.Component{
                            e.target.title.value,
                            e.target.desc.value
                        )
-                        alert("submit!!!!");
                     }
                     }>
                     <p><input type="text" name="title" placeholder="title"/></p>

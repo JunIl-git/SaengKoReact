@@ -23,6 +23,7 @@ Learn
     push를 사용할 경우 this.state.component의  newProps와 this.props.data 둘 다 갱신이 되어 항상 값이 같다.
 
     +추가 Array.from()을 사용해서 기존 배열을 복사한다.
+     let _contents = Array.from(this.state.contents);
 
 4. Class component의 lifeCycle(생명 주기)
     shouldComponentUpdate()는 render전에 호출이 되며,
@@ -34,3 +35,20 @@ Learn
      this.setState({[e.target.name]:e.target.value});
    }
    해당 태그에 name속성을 넣으면 적용이 된다.
+
+6. window.confirm()을 이용하여 확인창을 받고 true값을 받으면 코드를 진행시킨다.
+
+    if(window.confirm('삭제하시겠습니까?')){ 
+              const _contents = Array.from(this.state.contents);
+              for(let i=0; i<_contents.length; i++){
+                if(_contents[i].id === this.state.selected_content_id){
+                  _contents.splice(i,1);
+                  break;
+                }
+              }
+              this.setState({
+                mode : 'welcome',
+                contents : _contents
+              })
+            }
+    주의) 대화 상자가 닫힐 때까지 다른 모든 인터페이스에 접근할 수 없기 때문에 모달창은 남발하지 않는다.
