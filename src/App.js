@@ -5,6 +5,7 @@ import Control from './component/Control';
 import ReadContent from './component/ReadContent';
 import CreateContent from './component/CreateContent';
 import UpdateContent from './component/UpdateContent';
+import './css/App.css';
 
 class App extends React.Component{
   constructor(props){
@@ -98,7 +99,7 @@ class App extends React.Component{
         <Nav data ={this.state.contents} onClick={onClickButton2} ></Nav>
         <Control onChangeMode = {function(_mode){
           if(_mode === 'delete'){
-            if(window.confirm('삭제하시겠습니까?')){
+            if(window.confirm(this.state.contents[this.state.selected_content_id-1].title+'를 삭제하시겠습니까?')){
               const _contents = Array.from(this.state.contents);
               for(let i=0; i<_contents.length; i++){
                 if(_contents[i].id === this.state.selected_content_id){
