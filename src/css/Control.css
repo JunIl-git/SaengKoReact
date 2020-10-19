@@ -1,0 +1,18 @@
+.control {
+    width: 100px;
+    padding-right: 50px;
+}
+
+.control input {
+    border: none;
+    background: #596275;
+    border-radius: 3px;
+    color: white;
+}
+
+.control ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

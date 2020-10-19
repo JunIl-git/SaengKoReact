@@ -1,11 +1,11 @@
 import React from 'react';
-
+import '../css/Control.css';
 class Control extends React.Component{
     render(){
         console.log('Control render');
 
         return(
-            <div>
+            <div className="control">
                 <ul>
                     <li>
                         <a href="/create" 
