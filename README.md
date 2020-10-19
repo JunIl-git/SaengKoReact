@@ -5,11 +5,16 @@
 <h2>"U"pdate</h2>
 <h2>"D"elete</h2>
 
+1. Class문법으로 CRUD기능 구현
+2. 하위component로 props전달, 하위 component에서 event를 이용한 state변경
+3. lifeCycle 파악
+4. React의 immutable 파악
+
+<a href="https://junil-git.github.io/SaengKoReact/">CRUD 결과물 클릭!</a>
 
 
-<a href="https://junil-git.github.io/SaengKoReact/">CRUD결과물</a>
 
-<h2>points</h2>
+<h2>배운 점</h2>
 
 1. funciton 내에서 this를 사용하고 싶으면 this를 바인딩 또는 arrow function을 사용한다.
 
