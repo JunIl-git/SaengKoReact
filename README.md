@@ -1,6 +1,16 @@
-# 생활코딩 -CRUD- "Class" component React! 
+# React Class Component로 CRUD 만들기  
 
-Learn
+<h2>"C"reate</h2>
+<h2>"R"ead</h2>
+<h2>"U"pdate</h2>
+<h2>"D"elete</h2>
+
+
+
+<a href="https://junil-git.github.io/SaengKoReact/">CRUD결과물</a>
+
+<h2>points</h2>
+
 1. funciton 내에서 this를 사용하고 싶으면 this를 바인딩 또는 arrow function을 사용한다.
 
 2. 상위 component에서 하위 component에 값을 주고 싶으면 props를 사용하고
