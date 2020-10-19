@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/JunIl-git/SaengKoReact/static/css/main.6c68ed79.chunk.css",
+    "main.js": "/JunIl-git/SaengKoReact/static/js/main.afa1dd3c.chunk.js",
+    "main.js.map": "/JunIl-git/SaengKoReact/static/js/main.afa1dd3c.chunk.js.map",
+    "runtime-main.js": "/JunIl-git/SaengKoReact/static/js/runtime-main.b74f26cf.js",
+    "runtime-main.js.map": "/JunIl-git/SaengKoReact/static/js/runtime-main.b74f26cf.js.map",
+    "static/js/2.3c7fac71.chunk.js": "/JunIl-git/SaengKoReact/static/js/2.3c7fac71.chunk.js",
+    "static/js/2.3c7fac71.chunk.js.map": "/JunIl-git/SaengKoReact/static/js/2.3c7fac71.chunk.js.map",
+    "index.html": "/JunIl-git/SaengKoReact/index.html",
+    "precache-manifest.1ad67632d4396ef417fdd3dec915e4ae.js": "/JunIl-git/SaengKoReact/precache-manifest.1ad67632d4396ef417fdd3dec915e4ae.js",
+    "service-worker.js": "/JunIl-git/SaengKoReact/service-worker.js",
+    "static/css/main.6c68ed79.chunk.css.map": "/JunIl-git/SaengKoReact/static/css/main.6c68ed79.chunk.css.map",
+    "static/js/2.3c7fac71.chunk.js.LICENSE.txt": "/JunIl-git/SaengKoReact/static/js/2.3c7fac71.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b74f26cf.js",
+    "static/js/2.3c7fac71.chunk.js",
+    "static/css/main.6c68ed79.chunk.css",
+    "static/js/main.afa1dd3c.chunk.js"
+  ]
+}
