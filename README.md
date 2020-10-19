@@ -10,7 +10,7 @@
 3. lifeCycle 파악
 4. React의 immutable 파악
 
-<a href="https://junil-git.github.io/SaengKoReact/">CRUD 결과물 클릭!</a>
+<a href="https://junil-git.github.io/SaengKoReact/" target="_blank">CRUD 결과물 클릭!</a>
 
 
 
